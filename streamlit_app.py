@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import speech_recognition as sr
 import pydub
 import os
@@ -207,7 +207,7 @@ if is_input_file == True:
         with col1:
             st.image(image, caption='Word Cloud', use_column_width=True)
         with col2:
-            plt.clf()
+            # plt.clf()
             pie_chart = np.array([
                 audio_analytic.noun_num,
                 audio_analytic.verb_num,
@@ -215,13 +215,13 @@ if is_input_file == True:
                 audio_analytic.filler_num,
                 audio_analytic.other_num
             ])
-            plt.pie(pie_chart, counterclock=False, startangle=90)
-            plt.legend(label, fontsize=12, loc='lower right')
-            plt_file_name = "plt.png"
-            plt.savefig(plt_file_name)
-            plt_image = Image.open(plt_file_name)
-            plt_resize = plt_image.resize((400,200))
-            st.image(plt_resize, caption='円グラフ', use_column_width=True)
+            # plt.pie(pie_chart, counterclock=False, startangle=90)
+            # plt.legend(label, fontsize=12, loc='lower right')
+            # plt_file_name = "plt.png"
+            # plt.savefig(plt_file_name)
+            # plt_image = Image.open(plt_file_name)
+            # plt_resize = plt_image.resize((400,200))
+            # st.image(plt_resize, caption='円グラフ', use_column_width=True)
 
 
         text += tmp_text
@@ -240,7 +240,7 @@ if is_input_file == True:
     image = Image.open('sample.png')
     st.image(image, caption='Word Cloud', use_column_width=True)
 
-    plt.clf()
+    # plt.clf()
     pie_chart = np.array([
         audio_analytic.noun_num,
         audio_analytic.verb_num,
@@ -248,13 +248,13 @@ if is_input_file == True:
         audio_analytic.filler_num,
         audio_analytic.other_num
     ])
-    plt.pie(pie_chart, counterclock=False, startangle=90)
-    plt.legend(label, fontsize=12, loc='lower right')
-    plt_file_name = "plt.png"
-    plt.savefig(plt_file_name)
-    plt_image = Image.open(plt_file_name)
-    plt_resize = plt_image.resize((400,200))
-    st.image(plt_resize, caption='円グラフ', use_column_width=True)
+    # plt.pie(pie_chart, counterclock=False, startangle=90)
+    # plt.legend(label, fontsize=12, loc='lower right')
+    # plt_file_name = "plt.png"
+    # plt.savefig(plt_file_name)
+    # plt_image = Image.open(plt_file_name)
+    # plt_resize = plt_image.resize((400,200))
+    # st.image(plt_resize, caption='円グラフ', use_column_width=True)
 
     
 
