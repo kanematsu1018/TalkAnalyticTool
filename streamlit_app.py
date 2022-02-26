@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib
+# import matplotlib
 import speech_recognition as sr
 import pydub
 import os
@@ -44,15 +44,15 @@ input_data = ""
 is_input_file = False
 
 
-# フォントを全て読み込み
-fonts = set([f.name for f in matplotlib.font_manager.fontManager.ttflist])
+# # フォントを全て読み込み
+# fonts = set([f.name for f in matplotlib.font_manager.fontManager.ttflist])
  
-# 描画領域のサイズ調整
-plt.figure(figsize=(10,len(fonts)/4))
+# # 描画領域のサイズ調整
+# plt.figure(figsize=(10,len(fonts)/4))
  
-# フォントの表示
-for i, font in enumerate(fonts):
-    st.write(plt.text(0, i, f"日本語：{font}", fontname=font))
+# # フォントの表示
+# for i, font in enumerate(fonts):
+#     st.write(plt.text(0, i, f"日本語：{font}", fontname=font))
 
 
 # ラジオボタンの表示
@@ -232,7 +232,7 @@ if is_input_file == True:
                 audio_analytic.other_num
             ])
             plt.pie(pie_chart, counterclock=False, startangle=90)
-            plt.legend(label, fontsize=12, loc='lower right', prop={"family":"MS Gothic"})
+            plt.legend(label, fontsize=12, loc='lower right', prop={"family":"DejaVu Sans"})
             plt_file_name = "tmp/plt.png"
             plt.savefig(plt_file_name)
             plt_image = Image.open(plt_file_name)
@@ -265,7 +265,7 @@ if is_input_file == True:
         audio_analytic.other_num
     ])
     plt.pie(pie_chart, counterclock=False, startangle=90)
-    plt.legend(label, fontsize=12, loc='lower right', prop={"family":"MS Gothic"})
+    plt.legend(label, fontsize=12, loc='lower right', prop={"family":"DejaVu Sans"})
     plt_file_name = "plt.png"
     plt.savefig(plt_file_name)
     plt_image = Image.open(plt_file_name)
