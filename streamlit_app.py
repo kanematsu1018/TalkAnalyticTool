@@ -220,7 +220,7 @@ if is_input_file == True:
                 audio_analytic.other_num
             ])
             plt.pie(pie_chart, counterclock=False, startangle=90)
-            plt.legend(label, fontsize=12, loc='lower right')
+            plt.legend(label, fontsize=12, loc='lower right', fontname='MS Gothic')
             plt_file_name = "tmp/plt.png"
             plt.savefig(plt_file_name)
             plt_image = Image.open(plt_file_name)
@@ -253,7 +253,7 @@ if is_input_file == True:
         audio_analytic.other_num
     ])
     plt.pie(pie_chart, counterclock=False, startangle=90)
-    plt.legend(label, fontsize=12, loc='lower right')
+    plt.legend(label, fontsize=12, loc='lower right', fontname='MS Gothic')
     plt_file_name = "plt.png"
     plt.savefig(plt_file_name)
     plt_image = Image.open(plt_file_name)
