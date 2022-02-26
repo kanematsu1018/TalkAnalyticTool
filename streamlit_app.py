@@ -183,11 +183,11 @@ if is_input_file == True:
     audio_analytic = AudioAnalytic()
 
     label = [
-        "名詞",
-        "動詞",
-        "形容詞",
-        "フィラー",
-        "その他"
+        "Noun 名詞",
+        "Verv 動詞",
+        "abject 形容詞",
+        "filler フィラー",
+        "other その他"
     ]
 
 
