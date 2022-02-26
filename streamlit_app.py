@@ -50,6 +50,8 @@ if selected_item == 'Youtube':
     input_data = st.text_input('URLを入力してください')
 else:
     mp3_file = st.file_uploader("MP3ファイルアップロード", type="mp3")
+    tmp_sound = pydub.AudioSegment.from_mp3(mp3_file.name)
+    tmp_sound.export(WAV_FILE_NAME + ".mp3", format="mp3")
 
 
 
@@ -146,7 +148,8 @@ class AudioAnalytic:
 # mp3を読み込ませた後の処理
 if mp3_file  != None:
     is_input_file = True
-    mp3_file_name = mp3_file.name
+    mp3_file_name = WAV_FILE_NAME + ".mp3"
+    # mp3_file_name = mp3_file.name
 
 
 if is_input_file == True:
