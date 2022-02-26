@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
 import speech_recognition as sr
 import pydub
 import os
@@ -44,7 +45,7 @@ is_input_file = False
 
 
 # フォントを全て読み込み
-fonts = set([f.name for f in plt.font_manager.fontManager.ttflist])
+fonts = set([f.name for f in matplotlib.font_manager.fontManager.ttflist])
  
 # 描画領域のサイズ調整
 plt.figure(figsize=(10,len(fonts)/4))
